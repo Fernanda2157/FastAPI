@@ -6,6 +6,12 @@ app = FastAPI()
 
 # Definimos una ruta (endpoint) para el método HTTP GET, asociada al path raíz ('/')
 @app.get('/')
-def hello_word():
-    # Cuando se accede a esta ruta, retorna un diccionario JSON con la clave "hello" y el valor "world"
-    return { "hello": "world" }
+def home():
+    return "Hola mundo"
+
+@app.get('/saludo')
+def home():
+    return "HELLO WORLD"
+@app.get('/saludos')
+def home():
+    return "HELLO"
